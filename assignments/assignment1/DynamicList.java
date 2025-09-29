@@ -4,7 +4,7 @@ tms9908
 September 19, 2025
 CS-102 Data Structures and Algorithms
  */
-package assignments.assignment1.CS102Assignment1_DynamicArrays_TristanShi;
+package assignments.assignment1;
 public class DynamicList<E> extends ArrayList<E>{
     private int capacity;
     //default constructor creates an ArrayList of 1000 capacity

@@ -1,0 +1,12 @@
+Tristan Shi
+tms9908
+09/29/2025
+
+Come up with an example of data that would naturally be stored in a priority queue.
+
+A to do list of things a corporate worker might have to do: tasks get added and need to be done but some are more important than others.
+
+I think the implementation of PriorityQueue hashmap might not store duplicate values; unsure if I chose the best structure for this.
+
+I used a hashmap for the priorityqueue implementation because I saw the tuple of (position, element) and thought that ordered pairs
+called for hashmaps.

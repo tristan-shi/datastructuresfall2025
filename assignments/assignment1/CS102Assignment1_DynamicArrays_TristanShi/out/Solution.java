@@ -1,2 +1,0 @@
-package assignments.assignment1.CS102Assignment1_DynamicArrays_TristanShi.out;
-

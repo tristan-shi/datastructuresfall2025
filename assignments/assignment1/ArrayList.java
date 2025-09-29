@@ -1,4 +1,4 @@
-package assignments.assignment1.CS102Assignment1_DynamicArrays_TristanShi;
+package assignments.assignment1;
 
 public class ArrayList<E> implements list<E> {
     E[] array;
