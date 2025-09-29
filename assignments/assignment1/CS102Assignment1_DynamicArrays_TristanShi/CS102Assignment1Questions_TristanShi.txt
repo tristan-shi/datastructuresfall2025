@@ -1,0 +1,31 @@
+CS102 Assignment 1 - Dynamic Arrays (Questions)
+Tristan Shi
+tms9908
+September 19, 2025
+
+What is the benefit of DynamicList over DoublyLinkedList?
+Response: Since DynamicList is a child class of ArrayList and implements the same getAtIndex method, the complexity of
+fetching a specific piece of data at an index is only O(1), making a DynamicList far more efficient than a DoublyLinkedList,
+which has to traverse sequentially and can theoretically have the worst case complexity of O(n);
+
+What is the asymptotic complexity of increaseArraySize with respect to the parameter new_size?
+Response: The asymptotic complexity of increaseArraySize is O(0.5n) because this method only needs to do half as many operations
+as new_size, since new_size is double the previous size and the method only copies over the previous array, which only was half the size.
+However, since constants are ignored in asymptotic complexity, the complexity is O(n).
+
+If instead of doubling the size of the list when size==capacity, we instead increased the size by 1 by calling increaseArraySize(size+1),
+what is the complexity of the method addLast when the array is full? In this case, what is the complexity of adding N elements to the end of
+the list?
+Response: Increasing the size by 1 will still require O(n) complexity because every value of the previous array needs to be copied, resulting in n operations.
+Since the cost of one increase in size is O(n), doing this n times will result in a complexity of O(n^2).
+
+If n is a large power of 2, n = 2^m then what is the complexity of adding n elements to the end of an array in the code we have written?
+Can we make the asymptotic complexity of our code better by incrementing the size of the array in larger steps, say by multiplying capacity by 4 instead of 2?
+Response: Regardless of what the value of n is, the complexity of adding n elements to our array is still n because the only scaling operation we do is
+the copying of the array, which has a complexity of O(n).
+In regards to changing the amount we multiply our capacity when it becomes full, the complexity still stays O(n). Since creating an array of size (new_size*int) is an operation
+of complexity O(1), regardless of what we multiply it by, it does not change the complexity. The only operation with scaling complexity is the copying of the previous array, which will take the same
+amount of operations since while when the size multiplier is 2, we have to do twice as many copies than if the multiplier was 4, when the size multiplier is 4, we have to do a copy that
+is twice as long as if it was 2. The only difference between these multipliers is how quickly they allocate memory; at some amounts of added data, the 4 multiplier would be reserving
+a little less than twice as much memory as the two multiplier. (Theoretically the 4 multiplier could also result in less copy operations; I'm not certain as to if that could/would increase performance).
+
