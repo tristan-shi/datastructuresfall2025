@@ -2,7 +2,7 @@ package assignments.assignment2;
 import assignments.assignment2.interfaces.Position;
 
 import java.util.Iterator;
-//i just used the doublylinkedlist in the git and then edited it
+//i  just used the doublylinkedlist in the git and then edited it
 public class DoublyLinkedList<E> extends PositionList<E> implements Iterable<E>{
     private static class Node<E> implements Position<E> {
         private E element;

@@ -17,7 +17,6 @@ public class ArrayList<E> implements List<E>, Iterable<E> {
 // it can itterate through an arraylist with just index
     private class ArrayListIterator<E> implements Iterator<E> {
         private int index;
-
         @Override
         public boolean hasNext() {
             return index < size;
